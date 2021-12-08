@@ -17,6 +17,8 @@ defmodule FoodfinderWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/title", Titlecontroller, :index
+
   end
 
   # Other scopes may use custom stacks.
