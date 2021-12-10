@@ -7,6 +7,7 @@ defmodule FoodfinderWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug :put_root_layout, {FoodfinderWeb.LayoutView, :root}
   end
 
   pipeline :api do
@@ -17,8 +18,11 @@ defmodule FoodfinderWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
-    get "/title", Titlecontroller, :index
-
+    get "/title", TitleController, :index
+    get "/session/new", SessionController, :new
+    post "/session", SessionController, create
+    get "/create", CreateController, :new
+    post "/create", CreateController, :create
   end
 
   # Other scopes may use custom stacks.

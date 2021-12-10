@@ -6,8 +6,8 @@ defmodule Foodfinder.Food do
   schema "Food" do
     field :food_name, :string
     field :restaurant, :string
-    field :price, :float
-    field :distance, :float
+    field :price, :string
+    field :distance, :string
   end
 
   def changeset(food, attrs \\ %{}) do

@@ -3,7 +3,7 @@ defmodule Foodfinder.User do
   import Ecto.Changeset
   alias Bcrypt
 
-  schema "user" do
+  schema "users" do
     field :username, :string
     field :password, :string
     field :name, :string

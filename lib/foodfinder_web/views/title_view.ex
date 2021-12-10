@@ -1,3 +1,3 @@
-defmodule FoodfinderWeb.DashboardView do
+defmodule FoodfinderWeb.TitleView do
   use FoodfinderWeb, :view
 end

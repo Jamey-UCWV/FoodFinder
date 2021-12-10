@@ -2,7 +2,7 @@ defmodule Foodfinder.Repo.Migrations.AddInitialTables do
   use Ecto.Migration
 
   def change do
-    create table("user") do
+    create table("users") do
       add :username, :string
       add :password, :string
       add :name, :string
